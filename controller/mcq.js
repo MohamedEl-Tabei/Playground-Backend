@@ -11,7 +11,7 @@ const createMCQs = async (req, res) => {
     for (var i = 0; i < length; i++) {
       const q = new Model.MCQ({
         ...mcqs[i],
-        img: mcqs[i].img.length?mcqs[i].img.length:undefined,
+        img: mcqs[i].img.length?mcqs[i].img:undefined,
         answer: mcqs[i].options.indexOf(mcqs[i].answer),
         topicNumber: await topicNumber,
       });
