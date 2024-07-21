@@ -19,7 +19,7 @@ const createNew = async (req, res) => {
 const readAllTopics = async (req, res) => {
   try {
     let category = req.params.category;
-    let categories = ["All", "English", "Web", "Logical Reasoning","Database"];
+    let categories = ["All", "English", "Web", "Logical Reasoning","Exams"];
     let topics =
       category === "All"
         ? await Model.Topic.find()
